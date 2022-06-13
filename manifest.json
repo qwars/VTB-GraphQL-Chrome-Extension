@@ -7,6 +7,13 @@
     "service_worker": "background.js"
   },
   "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.corp.dev.vtb/*/gui"],
+      "css": ["gql-styles.css"],
+      "js": ["gql-script.js"]
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
